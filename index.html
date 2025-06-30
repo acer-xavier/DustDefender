@@ -35,6 +35,11 @@
   <script>
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = '"1565822787"';
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('/flutter_service_worker.js?v=<timestamp>'); // replace '<timestamp>' with your latest version/timestamp
+      });
+    }
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="./DustDefender/flutter.js" defer></script>
