@@ -37,7 +37,7 @@
     var serviceWorkerVersion = '"1565822787"';
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('/flutter_service_worker.js?v=<timestamp>'); // replace '<timestamp>' with your latest version/timestamp
+        navigator.serviceWorker.register('/pwabuilder-sw.js?v=<timestamp>'); // replace '<timestamp>' with your latest version/timestamp
       });
     }
   </script>
